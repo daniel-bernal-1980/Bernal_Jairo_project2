@@ -24,7 +24,11 @@
 	Interior Design-->
 	
 	
-		<header><h1>Design Track</h1></header>
+		<header><h1 id="designTrack">Design Track</h1></header>
+		<nav>
+			<a href="#" id="clear">Clear Stored Data</a>
+			<a href="#" id="display">Display Data</a>
+		</nav>
 		<form method="post" action="#" id="projectForm">
 		<fieldset id= "projectFieldset">
 			<legend><h2>New Project</h2></legend>
@@ -37,9 +41,9 @@
 				</ul>
 				<fieldset id="projectTasksFieldset">
 					<legend><h3>Tasks</h3></legend>
-						<ul> <!--Tasks List	-->			
+						<ul id="tasks"> <!--Tasks List	-->			
 							<li>Drawings:
-								<ul>				
+								<ul class="checkbox">				
 									<li><input type="checkbox" value="Plan" id="Plan" /><label for="Plan">Plans</label>  <!--<label for="type">&nbsp;&nbsp;&nbsp;&nbsp;Type:</label><input type="text" id="type" />--></li>
 									<li><input type="checkbox" value="elv" id="elv" /><label for="elv">Elevations</label></li>
 									<li><input type="checkbox" value="scPlan" id="scPlan" /><label for="scPlan">Sections</label> <!--<label for="type">&nbsp;&nbsp;&nbsp;&nbsp;Type:</label><input type="text" id="type" />--></li>					
@@ -47,7 +51,7 @@
 							</li>
 							<li><label for="comments">Drawings Comments:</label><br /><textarea id="comments"></textarea></li>	
 							<li>3D Work:
-								<ul>
+								<ul class="checkbox">
 									<li><input type="radio" value="dmodel" id="dmodel" name="models" /><label for="dmodel">Digital Model</label></li>
 									<li><input type="radio" value="phModel" id="phModel" name="models" /><label for="phModel">Physical Model</label></li>
 									<li><input type="radio" value="anim" id="anim" name="models" /><label for="anim">Animations</label></li>
@@ -59,10 +63,6 @@
 				</fieldset>
 				<input type="submit" value="Save Project" />
 		</form>
-		<ul>
-			<li><a href="#" id="clear">Clear Stored Data</a></li>
-			<li><a href="#" id="display">Display Data</a></li>
-		</ul>
 		<script src="jc/main.js" type="text/javascript"></script>
 	</body>
 </html>
