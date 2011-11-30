@@ -15,13 +15,18 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	//Variable defaults
 	
+	var projectType = ["-- Choose A Type --", "Site Development", "Building Envelope", "Interior Design"];
 	
+
 	
 	
 	//Set link & sudmit click Events
-
-
-
+	var displayLink = $("display");
+	displayLink.addEventListener("click", getData);
+	var clearLink = $("clear");
+	clearLink.addEventListener("click", clearLocal);
+	var saveLink = $("submit");
+	saveLink.addEventListener("click", storeData);
 
 
 
