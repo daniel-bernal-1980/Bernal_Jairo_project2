@@ -5,6 +5,7 @@
 
 // DOM Content Loaed.
 window.addEventListener("DOMContentLoaded", function(){
+	
 
 	//getElementById function
 	function $(x) {
@@ -54,6 +55,27 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 	
 	
+	function toggleControls(n) {
+		switch (n) {
+			case "on":
+				$("projectForm").style.display = "none";
+				$("clear").style.display = "inline";
+				$("displayLink").style.display = "none";
+				$("addNew").style.display = "inline";
+				break;
+			case "off":
+				$("projectForm").style.display = "block";
+				$("clear").style.display = "inline";
+				$("displayLink").style.display = "inline";
+				$("addNew").style.display = "none";
+				$("items").style.display = "none";
+				break;
+			default:
+				return false;	
+		}
+	
+	};
+	
 	
 	// Store Data
 	
@@ -74,8 +96,49 @@ window.addEventListener("DOMContentLoaded", function(){
 			item.rend		= ["Renderings:", $("rend").value];
 			
 		localStorage.setItem(id, JSON.stringify(item));
-		alert("Contact Saved!");
+		alert("Project Stored!");
 	};
+	
+	// Display Data
+	
+	function getData() {
+		toggleControls("on");
+		var makeDiv = document.createElement("div");
+		makeDiv.setAttribute("id", "items");
+		var makeList = document.createElement("ul");
+		makeDiv.appendChild(makeList);
+		document.body.appendChild(makeDiv)
+		$("items").style.display = "block";
+		for(var i=0, len = localStorage.length; i<len; i++){
+			var makeLi =  document.createElement("li");
+			makeList.appendChild(makeLi);
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			var obj = JSON.parse(value);
+			var makeSubList = document.createElement("ul");
+			makeLi.appendChild(makeSubList);
+			for (var n in Obj){
+				var makeSubLi = document.createElement("li");
+				makeSubList.appendChild(makeSubLi);
+				var optSubText = obj[n][0]+" "+obj[n][1];
+				makeSubLi.innerHTML = optSubText;
+			};
+		};
+	};
+	
+	// Clear Data
+	
+	function clearLocal() {
+		if (localStorage.length === 0){
+			alert("There is no projects.")
+		}else{
+			localStorage.clear();
+			alert("All stored projects are deleted!");
+			window.location.reload();
+			return false;
+		}
+	},
+	
 	
 	//Variable defaults
 	
@@ -89,10 +152,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	//Set link & submit click Events
 	
-//	var displayLink = $("display");
-//	displayLink.addEventListener("click", getData);
-//	var clearLink = $("clear");
-//	clearLink.addEventListener("click", clearLocal);
+	var displayLink = $("display");
+	displayLink.addEventListener("click", getData);
+	var clearLink = $("clear");
+	clearLink.addEventListener("click", clearLocal);
 	var saveLink = $("submit");
 	saveLink.addEventListener("click", storeData);
 
