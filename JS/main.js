@@ -103,6 +103,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	function getData() {
 		toggleControls("on");
+		if (localStorage.length === 0){
+			alert("There is no data in local storage.")
+		};
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
 		var makeList = document.createElement("ul");
@@ -136,8 +139,8 @@ window.addEventListener("DOMContentLoaded", function(){
 			alert("All stored projects are deleted!");
 			window.location.reload();
 			return false;
-		}
-	},
+		};
+	};
 	
 	
 	//Variable defaults
