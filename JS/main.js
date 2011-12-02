@@ -85,16 +85,16 @@ window.addEventListener("DOMContentLoaded", function(){
 		getSelectedRadio();
 		getCheckboxValue();
 		var item			= {};
-			item.pType		= ["Project Type:", $("pType").value];
-			item.pName		= ["Project Name:", $("pName").value];
-			item.pNum		= ["Project Number:", $("pNum").value];
-			item.dName		= ["Designer Name:", $("dName").value];
-			item.dateComp	= ["Completion Date:", $("dateComp").value];
-			item.dwg		= ["Drawings:", dwgValue];
-			item.dComt		= ["Drawings Comments:", $("dComments").value];
-			item.work3d		= ["3D Work:", workValue];
-			item.wComt		= ["3D Work Comments:", $("wComments").value];
-			item.rend		= ["Renderings:", $("rend").value];
+			item.pType		= ["Project Type: ", $("pType").value];
+			item.pName		= ["Project Name: ", $("pName").value];
+			item.pNum		= ["Project Number: ", $("pNum").value];
+			item.dName		= ["Designer Name: ", $("dName").value];
+			item.dateComp	= ["Completion Date: ", $("dateComp").value];
+			item.dwg		= ["Drawings: ", dwgValue];
+			item.dComt		= ["Drawings Comments: ", $("dComments").value];
+			item.work3d		= ["3D Work: ", workValue];
+			item.wComt		= ["3D Work Comments: ", $("wComments").value];
+			item.rend		= ["Renderings: ", $("rend").value];
 			
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Project Stored!");
