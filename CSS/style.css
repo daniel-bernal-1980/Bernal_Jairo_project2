@@ -8,7 +8,7 @@
 	
 Body{ 
 	background-color: #284767;
-	color:#444f5a;
+	color:#284767;
 	font: 13px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
@@ -19,15 +19,17 @@ h1{
 	margin-left: -10px;
 	padding-left: 10px;
 	color:  #284767;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	-moz-box-shadow: 0 0 4px #c1c1c1;
 	-webkit-box-shadow: 0 0 4px #c1c1c1;
 	box-shadow: 0 0 4px #c1c1c1;
-	font-size: 30px;
 	border-bottom: 1px solid gray;
 	text-shadow: 2px 2px 2px rgba(244, 139, 33, 0.68);
 	text-align: center;
+	font-style: "Century Gothic";
+	font-size: 36px;
+	text-transform: uppercase;
 }
 
 nav{
@@ -58,32 +60,45 @@ nav{
 	padding-left: 10px;
 }
 
-#projectTasksFieldset{
-	margin-top: 5px;
-	border: 2px solid white;
-	-moz-box-shadow: 0 0 4px #aeaeae;
-	-webkit-box-shadow: 0 0 4px #aeaeae;
-}
+/*I couldn't figured out why the border I applied to the  fieldset dosen't close on top of the legend title.*/
 
 #projectFieldset{
 	margin-top: 20px;
 	background-color: #7c9ec0;
-	border: 2px solid white;
+	border: 1px solid white;
 	-moz-box-shadow: 0 0 4px #aeaeae;
 	-webkit-box-shadow: 0 0 4px #aeaeae;
 	box-shadow: 0 0 4px #aeaeae;
+}
+
+#projectTasksFieldset{
+	margin-top: 5px;
+	border: 1px solid white;
+	-moz-box-shadow: 0 0 4px #aeaeae;
+	-webkit-box-shadow: 0 0 4px #aeaeae;
+}
+
+#projectInfo{
+	margin-top: 15px;
+	margin-bottom: 2px;
+}
+
+.pInfo{
+	display: block;
 }
 
 h2{
 	padding-top: 30px;
 	height: 20px;
 	text-shadow: 2px 2px 2px rgba(244, 139, 33, 0.68);
+	color: #284767;
 }
 
 h3{
 	padding-top: 30px;
 	text-shadow: 2px 2px 2px rgba(244, 139, 33, 0.68);
 	font-size: 16px;
+	color: #284767;
 }
 
 ul{

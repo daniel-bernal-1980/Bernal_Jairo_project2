@@ -29,10 +29,10 @@
 			<legend><h2>New Project</h2></legend>
 				<ul id="projectInfo">
 					<li id="selectType"><label for="pType">Project Type:</label><br /></li>
-					<li><label for="pName">Project Name:</label><input type="text" id="pName" /></li>
-					<li><label for="pNum">Project Number:</label><input type="number" id="pNum" placeholder="yynnn.nn" /></li>
-					<li><label for="dName">Designer Name:</label><input type="text" id="dName" /></li>
-					<li><label for="dateComp">Completion Date:</label><input type="date" id="dateComp" placeholder="yyyy-mm-dd" /></li>
+					<li><label for="pName">Project Name:</label><input type="text" id="pName" class="pInfo"/></li>
+					<li><label for="pNum">Project Number:</label><input type="number" id="pNum" class="pInfo" placeholder="yynnn.nn" /></li>
+					<li><label for="dName">Designer Name:</label><input type="text" id="dName" class="pInfo"/></li>
+					<li><label for="dateComp">Completion Date:</label><input type="date" id="dateComp" class="pInfo" placeholder="yyyy-mm-dd" /></li>
 				</ul>
 				<fieldset id="projectTasksFieldset">
 					<legend><h3>Tasks</h3></legend>
@@ -41,7 +41,7 @@
 								<ul class="checkbox">				
 									<li><input type="checkbox" value="Plan" id="Plan" name="drawings" /><label for="Plan">Plans</label></li>
 									<li><input type="checkbox" value="Elevation" id="elv" name="drawings"/><label for="elv">Elevations</label></li>
-									<li><input type="checkbox" value="Sections" id="scPlan"  /><label for="scPlan">Sections</label></li>					
+									<li><input type="checkbox" value="Sections" id="scPlan" name="drawings" /><label for="scPlan">Sections</label></li>					
 								</ul>
 							</li>
 							<li><label for="dComments">Drawings Comments:</label><br /><textarea id="dComments"></textarea></li>	
@@ -53,7 +53,7 @@
 									<li><input type="radio" value="Digital Model, Physical Model and Animation" id="all" name="models" /><label for="all">All</label></li>
 								</ul>
 							<li><label for="wComments">3D Work Comments:</label><br /><textarea id="wComments"></textarea></li>	
-							<li><label for="rend">Renderings:</label><input type="range" min="1" max="100" id="rend" /></li>
+							<li><label for="rend">Renderings:</label><input type="range" min="1" max="20" id="rend" /></li>
 						</ul><!--Tasks List - End-->		
 				</fieldset>
 				<input type="submit" value="Save Project" id="submit"/>
