@@ -43,6 +43,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	};
 	
 	//Value of selected checkbox.
+	// this function doesn't work as I wanted it to work.
+	// If I pick all the options it only returns the last option.
+	// I want it to display all the options that are selected.
 	
 	function getCheckboxValue() {
 		var checkboxes = document.forms[0].drawings;

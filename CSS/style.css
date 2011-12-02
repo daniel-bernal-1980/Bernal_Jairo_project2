@@ -60,7 +60,8 @@ nav{
 	padding-left: 10px;
 }
 
-/*I couldn't figured out why the border I applied to the  fieldset dosen't close on top of the legend title.*/
+/*I couldn't figured out why the border I applied to the fieldset dosen't close on top of the legend title.
+  It does show the shadow all around the fieldset.  */
 
 #projectFieldset{
 	margin-top: 20px;
