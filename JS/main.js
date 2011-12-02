@@ -3,7 +3,7 @@
 //VFW 1112
 //12/01/2011		
 
-// DOM Content Loaed.
+// DOM Content Load.
 window.addEventListener("DOMContentLoaded", function(){
 	
 
@@ -51,6 +51,7 @@ window.addEventListener("DOMContentLoaded", function(){
 					dwgValue = 	checkboxes[i].value;		
 				}else{
 					dwgValue = "No Drawings Needed!"
+				};
 			};
 	};
 	
@@ -60,13 +61,13 @@ window.addEventListener("DOMContentLoaded", function(){
 			case "on":
 				$("projectForm").style.display = "none";
 				$("clear").style.display = "inline";
-				$("displayLink").style.display = "none";
+				$("display").style.display = "none";
 				$("addNew").style.display = "inline";
 				break;
 			case "off":
 				$("projectForm").style.display = "block";
 				$("clear").style.display = "inline";
-				$("displayLink").style.display = "inline";
+				$("display").style.display = "inline";
 				$("addNew").style.display = "none";
 				$("items").style.display = "none";
 				break;
@@ -120,7 +121,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			var obj = JSON.parse(value);
 			var makeSubList = document.createElement("ul");
 			makeLi.appendChild(makeSubList);
-			for (var n in Obj){
+			for (var n in obj){
 				var makeSubLi = document.createElement("li");
 				makeSubList.appendChild(makeSubLi);
 				var optSubText = obj[n][0]+" "+obj[n][1];
@@ -161,8 +162,5 @@ window.addEventListener("DOMContentLoaded", function(){
 	clearLink.addEventListener("click", clearLocal);
 	var saveLink = $("submit");
 	saveLink.addEventListener("click", storeData);
-
-
-
 
 });
